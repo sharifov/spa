@@ -1,0 +1,132 @@
+.left-menu__list {
+  &.v-navigation-drawer--fixed {
+    .profile-link:before {
+      width: 50%;
+      transition: 0.3s;
+      transition-delay: 0.3s;
+    }
+  }
+
+  &.v-navigation-drawer--close {
+    .profile-link:before {
+      width: 100%;
+    }
+  }
+}
+
+.profile-link {
+  padding: 20px 0 0 0;
+  position: relative;
+  border-top: 5px solid #fbcb30;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -5px;
+    height: 5px;
+    background-color: #3d4c4d;
+    transition: 0.3s;
+  }
+
+  .v-list__tile__title {
+    height: auto;
+  }
+
+  &--data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--name {
+    color: #3d4c4d;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &--bonus {
+    font-size: 14px;
+    color: #3d4c4d;
+    display: flex;
+    flex-direction: column;
+
+    .bonus-number {
+      color: #3d4c4d;
+      font-weight: 500;
+      font-size: 36px;
+      padding-top: 6px;
+    }
+  }
+}
+
+.left-menu__list {
+  .v-list:not(.profile-link){
+    padding: 0;
+  }
+  .v-list__tile {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  * {
+    color: #3d4c4d;
+  }
+
+  .v-icon {
+    color: #3d4c4d;
+  }
+
+  .avatar-wrap {
+    display: flex;
+    align-items: center;
+
+    .user-avatar {
+      padding-right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      color: #3e4c66;
+
+      img {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fbcb30;
+      }
+    }
+  }
+
+  .v-list__tile__content.left-menu__cart {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .badge {
+      height: 27px;
+      min-width: 27px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 50%;
+      background-color: #fbcb30;
+      font-weight: 600;
+      font-size: 14px;
+      color: #3e4c66;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .v-list__tile--avatar {
+    height: auto;
+  }
+}
+.theme--light.v-list .v-list__tile--link:not(.v-list__tile--avatar){
+  border-bottom: 1px solid rgba(0,0,0,.07);
+  height: 60px;
+}
+.theme--light.v-list .v-list__tile--link.v-list__tile--avatar:hover{
+  background-color: transparent;
+}

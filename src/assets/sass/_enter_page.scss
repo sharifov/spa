@@ -1,0 +1,323 @@
+.enter-page{
+  align-items: center;
+  &--head{
+    display: flex;
+    margin-bottom: 8px;
+  }
+  &--title{
+    white-space: nowrap;
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 2.9px;
+    word-spacing: 5px;
+    color: #324b4c;
+    margin-top: 15px;
+    height: 22px;
+    line-height: 0;
+  }
+  &--logo{
+    width: 235px;
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &--rect{
+    width: 255px;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .top-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+  &--background{
+    width: 540px;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &--body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &--form{
+    margin-left: 30px;
+    flex-grow: 1;
+
+    form{
+      margin-bottom: 5px;
+    }
+  }
+  &--buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .reg-btn{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .check-member{
+      .v-label{
+        font-size: 14px;
+        left: -5px!important;
+      }
+    }
+  }
+  .enter-btn{
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    box-shadow: 2px 2px 2px #bfbebb!important;
+  }
+}
+
+.custom-link{
+  box-shadow: none!important;
+  border: none!important;
+  min-width: inherit!important;
+  background: none!important;
+  padding: 0;
+  height: auto;
+  position: relative;
+  display: inline-block;
+
+  &:hover{
+    &:before{
+      background-color: transparent!important;
+    }
+    .v-btn__content{
+      color: #324b4c;
+      &:before{
+        left: 0;
+        width: 100%;
+        background-color: #324b4c;
+        transition:0.3s;
+      }
+    }
+  }
+
+  .v-btn__content{
+    color: rgba(0,0,0,0.4);
+    display: inline-flex;
+    margin: 0;
+    justify-content: flex-end;
+
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 1px;
+      width: 0;
+      background-color: transparent;
+      transition:0.3s;
+    }
+  }
+}
+
+.show-sm,
+.show-xs{
+  display: none;
+}
+
+.content-centered{
+  align-items: center;
+}
+
+@media only screen and (max-width: 1350px) {
+  .enter-page{
+    &--title{
+      letter-spacing: 1.5px;
+    }
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .enter-page{
+    &--title{
+      letter-spacing: 1px;
+      word-spacing: 3px;
+    }
+    &--rect{
+      width: 50%;
+      max-width: 280px;
+      height: 40px;
+      img{
+        object-fit:cover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .enter-page{
+    &--title{
+      letter-spacing: 0px;
+      word-spacing: 0px;
+      font-size: 30px;
+    }
+
+    &--buttons{
+      position: relative;
+
+      .reg-btn{
+        width: 100%;
+        .custom-link{
+          line-height: 1;
+        }
+
+        .register-link{
+          margin-top: 15px;
+        }
+      }
+    }
+    .enter-btn{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .check-member{
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 0;
+      bottom: 24px;
+      line-height: 1;
+    }
+
+    &--rect{
+      width: 50%;
+      height: 40px;
+      img{
+        object-fit:cover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  #footer{
+    padding:0 24px;
+  }
+  .enter-page{
+    &--background {
+      width: 60%;
+    }
+    .top-wrap{
+      margin-left: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .enter-page{
+    .reg-btn{
+      .custom-link{
+        font-size: 12px;
+      }
+    }
+    &--buttons .check-member {
+      bottom: 23px;
+      .v-label{
+        font-size: 12px;
+      }
+    }
+  }
+  #app .enter-page .iek-btn{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .enter-page{
+    &--title{
+      font-size: 25px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .hide-sm{display: none;}
+  .show-sm{display: block;}
+
+  .enter-page{
+    &--title{
+      font-size: 20px;
+    }
+    &--background {
+      width: 50%;
+    }
+    &--logo{
+      width: 130px;
+      flex-shrink:0;
+    }
+    &--rect{
+      height: 30px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+  .hide-xs{display: none;}
+  .show-xs{display: block;}
+  .content-centered{align-items: flex-start;}
+
+  .enter-page{
+    .top-wrap{
+      margin-left: 20px;
+      justify-content: flex-end;
+      width: 130px;
+    }
+
+    &--head{
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+
+      .enter-page--title{
+        width: 100%;
+        line-height: 1.1;
+        white-space: normal;
+      }
+    }
+    &--rect {
+      width: 100%;
+      img{
+        object-fit: contain;
+      }
+    }
+    &--background{
+      display: none;
+    }
+    &--form{
+      margin-left: 0;
+    }
+
+  }
+
+  .footer-wrap{
+    padding: 0 0 20px 0;
+    border: 0;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  #app .container.enter-page{
+    padding: 0;
+  }
+}
